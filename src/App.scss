@@ -4,25 +4,29 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: RGB(79, 113, 120);
 }
 
-h2,
-h3,
-h4 {
+.App {
+  background-color: rgb(79, 113, 120);
+  min-height: 100vh;
+}
+
+.one,
+.two,
+.three {
   font-family: $primary-font;
   text-align: center;
   margin-top: 1rem;
 }
 
-h2 {
+.one {
   color: $secondary;
 }
 
-h3 {
+.two {
   color: $tertiary;
 }
 
-h4 {
+.three {
   color: $third;
 }
