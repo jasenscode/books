@@ -1,0 +1,10 @@
+@use "../../assets/sass/typography" as *;
+
+.header-text {
+  font-family: $primary-font;
+  color: #ffffff;
+  font-size: 3.8rem;
+  font-style: italic;
+  text-align: center;
+  padding: 1rem;
+}
