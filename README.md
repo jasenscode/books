@@ -6,7 +6,7 @@ The timeframe allowed to complete this project was one week.
 
 [Check out the live demo here!](https://jasenscode.github.io/books/)
 
-![Translator screenshot](ss link here)
+![Front end screenshot](ss link here)
 ____________
 ### Technologies
 
