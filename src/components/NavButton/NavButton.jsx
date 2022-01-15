@@ -7,7 +7,7 @@ const NavButton = (props) => {
 
   return (
     <button className="nav-btn">
-      <FontAwesomeIcon className="nav-btn__icon" icon={icon} />
+      <FontAwesomeIcon className="nav-btn__icon" icon={icon} onClick={handleClick} />
       <p className="nav-btn__text">{text}</p>
     </button>
   );
