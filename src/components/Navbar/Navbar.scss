@@ -10,16 +10,7 @@
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   font-family: $primary-font;
-  &__icon {
-    color: $tertiary;
-    font-size: 2rem;
-  }
-  &__text {
-    font-weight: 600;
-    font-size: 1.2rem;
-  }
 }
