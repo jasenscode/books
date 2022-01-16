@@ -8,7 +8,7 @@
 
 .App {
   min-height: 100vh;
-  background-color: rgb(79, 113, 120);
+  background-color: $color-primary;
 }
 
 .one,
@@ -16,17 +16,19 @@
 .three {
   font-family: $primary-font;
   text-align: center;
-  margin-top: 1rem;
+  margin: 1rem;
+  height: 3rem;
 }
 
 .one {
-  color: $secondary;
+  background-color: $secondary;
 }
 
 .two {
-  color: $tertiary;
+  background-color: white;
+  border-radius: 5px;
 }
 
 .three {
-  color: $third;
+  background-color: $third;
 }

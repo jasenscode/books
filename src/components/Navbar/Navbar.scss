@@ -2,15 +2,10 @@
 @use "../../assets/sass/typography" as *;
 
 .navbar {
-  height: 6rem;
   width: 100%;
   background-color: $color-secondary;
-  position: absolute;
-  bottom: 0;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  font-family: $primary-font;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  font-family: $primary-font;
 }
