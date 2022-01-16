@@ -1,5 +1,4 @@
 import "./ActionBar.scss";
-import react from "react";
 import { useState } from "react";
 import NavBar from "../../components/Navbar/Navbar";
 import SearchBox from "../../components/SearchBox/SearchBox";

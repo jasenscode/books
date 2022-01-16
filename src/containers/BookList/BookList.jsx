@@ -1,5 +1,4 @@
 import "./BookList.scss";
-import react from "react";
 
 const BookList = (props) => {
   // retrieved array as prop here
