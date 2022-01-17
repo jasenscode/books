@@ -1,14 +1,19 @@
 import "./BookList.scss";
+import BookCard from "../../components/BookCard/BookCard";
 
 const BookList = (props) => {
-  // retrieved array as prop here
-  const { books } = props;
+  const { booksArr } = props;
 
-  const getBook = books.map((book) => {
-    return <div>{book.name}</div>;
+  const getBook = booksArr.map((book, index) => {
+    return <BookCard imgUrl={book.imageUrl} rating={book.rating} name={book.name} author={book.author} description={book.description} />;
   });
 
-  return <div className="book-list">{getBook}</div>;
+  return (
+    <div className="book-list">
+      {getBook}
+      <BookCard />
+    </div>
+  );
 };
 
 export default BookList;
