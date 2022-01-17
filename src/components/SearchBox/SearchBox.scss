@@ -7,7 +7,10 @@
   font-weight: 600;
   font-size: 1rem;
   border-radius: 5px;
-  border: 1px solid $color-primary;
+  border: 1px solid $tertiary;
   width: 90%;
   padding: 0.5rem;
+  &:focus {
+    outline: 1px solid $tertiary;
+  }
 }

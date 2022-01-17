@@ -8,27 +8,5 @@
 
 .App {
   min-height: 100vh;
-  background-color: $color-primary;
-}
-
-.one,
-.two,
-.three {
-  font-family: $primary-font;
-  text-align: center;
-  margin: 1rem;
-  height: 3rem;
-}
-
-.one {
-  background-color: $secondary;
-}
-
-.two {
-  background-color: white;
-  border-radius: 5px;
-}
-
-.three {
-  background-color: $third;
+  background-color: #efefef;
 }

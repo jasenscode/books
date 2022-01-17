@@ -5,7 +5,7 @@
   background-color: $color-secondary;
   border-radius: 5px;
   font-family: $primary-font;
-  padding: 0.8rem;
+  padding: 1rem 0.8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,9 +14,6 @@
     width: 120px;
     border: 1px solid $color-tertiary;
   }
-  &__rating {
-    font-weight: 700;
-  }
   &__name {
     font-weight: 700;
     font-size: 1.3rem;
@@ -24,13 +21,13 @@
   &__author {
     font-size: 0.9rem;
     font-weight: 600;
-    padding-bottom: 0.4rem;
-    border-bottom: 0.1rem solid $color-tertiary;
-  }
-  &__description {
     font-family: $secondary-font;
-    font-size: 0.9rem;
-    text-align: center;
-    line-height: 1.2rem;
+    padding-bottom: 0.4rem;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .book-card {
+    width: 25%;
   }
 }

@@ -5,15 +5,10 @@ const BookList = (props) => {
   const { booksArr } = props;
 
   const getBook = booksArr.map((book, index) => {
-    return <BookCard imgUrl={book.imageUrl} rating={book.rating} name={book.name} author={book.author} description={book.description} />;
+    return <BookCard key={"book" + index} imgUrl={book.imageUrl} name={book.name} author={book.author} />;
   });
 
-  return (
-    <div className="book-list">
-      {getBook}
-      <BookCard />
-    </div>
-  );
+  return <div className="book-list">{getBook}</div>;
 };
 
 export default BookList;
