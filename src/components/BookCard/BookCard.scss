@@ -5,11 +5,12 @@
   background-color: $color-secondary;
   border-radius: 5px;
   font-family: $primary-font;
-  padding: 1rem 0.8rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.4rem;
+  width: 60%;
   &__img {
     width: 120px;
     border: 1px solid $color-tertiary;
@@ -17,12 +18,12 @@
   &__name {
     font-weight: 700;
     font-size: 1.3rem;
+    text-align: center;
   }
   &__author {
     font-size: 0.9rem;
     font-weight: 600;
     font-family: $secondary-font;
-    padding-bottom: 0.4rem;
   }
 }
 

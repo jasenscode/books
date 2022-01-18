@@ -12,11 +12,17 @@ const App = () => {
   const [booksArr, setBooksArr] = useState([]);
   const [textSearch, setTextSearch] = useState("");
 
+  // Retrieve API data function
   const getBooks = () => {
     fetch("http://localhost:8080/books")
       .then((response) => response.json())
       .then((data) => setBooksArr(data));
   };
+
+  // Add API data function
+  // const addBook = () => {
+  //   fetch("http://localhost:8080/book/")
+  // };
 
   // Fetch data from API
   useEffect(() => {
@@ -35,6 +41,12 @@ const App = () => {
     setTextSearch(searchTerm);
   };
 
+  // Function to add book via POST
+  // const handleAdd = (event)=>{
+  //   event.preventDefault();
+  // };
+
+  // Use search value from search box input to filter over data from API
   const booksArrFilter = booksArr.filter((book) => {
     return textSearch ? book.name.toLowerCase().includes(textSearch) : booksArr;
   });

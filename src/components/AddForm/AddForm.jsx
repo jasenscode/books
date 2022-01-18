@@ -1,6 +1,8 @@
 import "./AddForm.scss";
 
-const AddForm = () => {
+const AddForm = (props) => {
+  // const { url, method } = props;
+
   return (
     <form action="" className="add-form">
       <label className="add-form__label">Title</label>
@@ -19,7 +21,7 @@ const AddForm = () => {
         <option value="4">4</option>
         <option value="5">5</option>
       </select>
-      <button className="add-form__btn">Submit</button>
+      <input type="submit" value="Submit" className="add-form__btn" />
     </form>
   );
 };
