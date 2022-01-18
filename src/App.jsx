@@ -13,24 +13,32 @@ const App = () => {
   const [booksArr, setBooksArr] = useState([]);
   const [textSearch, setTextSearch] = useState("");
   const [bookFocus, showBookFocus] = useState(false);
-  const [bookList, showBookList] = useState(true);
+  const [individualBook, setIndividualBook] = useState({});
 
-  // GET API data function
+  // FETCHES
+  // GET
   const getBooks = () => {
     fetch("http://localhost:8080/books")
       .then((response) => response.json())
       .then((data) => setBooksArr(data));
   };
 
-  // POST API data function
+  // POST
   // const addBook = () => {
   //   fetch("http://localhost:8080/book/")
   // };
 
-  // Fetch data from API
+  // GET data from API
   useEffect(() => {
     getBooks();
   }, []);
+
+  // POST data to API
+  const handleAddBook = (event) => {
+    event.preventDefault();
+    // can use name properties on inputs in addform to get value
+    console.log(event.target.imageurl.value);
+  };
 
   // Get search input value
   const handleSearchBook = (event) => {
@@ -38,23 +46,22 @@ const App = () => {
     setTextSearch(searchTerm);
   };
 
-  // Function to add book via POST
-  const handleAddBook = (event) => {
-    event.preventDefault();
-    // can use name properties on inputs in addform to get value
-    console.log(event.target.imageurl.value);
-  };
-
-  // Function to show/hide book focus
-  const handleClickBook = (event) => {
+  // Function to show book focus
+  const handleClickCard = (event) => {
     showBookFocus(true);
-    showBookList(false);
+
+    booksArr.forEach((book) => {
+      if (book.name.toLowerCase() === event.target.innerText.toLowerCase() || book.author.toLowerCase() === event.target.innerText.toLowerCase() || book.imageUrl === event.target.currentSrc) {
+        setIndividualBook(book);
+      }
+    });
   };
 
-  // Function to close book focus
+  console.log(individualBook);
+
+  // Function to hide book focus
   const handleClickFocus = () => {
     showBookFocus(false);
-    showBookList(true);
   };
 
   // Use search value from search box input to filter over data from API
@@ -66,8 +73,7 @@ const App = () => {
     <div className="App">
       <HeaderLogo text="Bibliotaph." />
       <ActionBar handleSearch={handleSearchBook} handleAdd={handleAddBook} />
-      {bookFocus && <BookFocus clickFocus={handleClickFocus} />}
-      {bookList && <BookList booksArr={booksArrFilter} handleClick={handleClickBook} />}
+      {bookFocus && individualBook ? <BookFocus book={individualBook} clickFocus={handleClickFocus} /> : <BookList booksArr={booksArrFilter} handleClick={handleClickCard} />}
     </div>
   );
 };

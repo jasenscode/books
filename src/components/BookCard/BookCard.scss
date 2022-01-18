@@ -5,14 +5,14 @@
   background-color: $color-secondary;
   border-radius: 5px;
   font-family: $primary-font;
-  padding: 1rem;
   display: flex;
   align-items: center;
   gap: 0.4rem;
+  padding-right: 0.5rem;
   width: 100%;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
   &__img {
-    height: 110px;
+    height: 250px;
     border: 1px solid $color-tertiary;
   }
   &__info {
