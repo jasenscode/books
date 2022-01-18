@@ -5,6 +5,7 @@ import { faSearch, faPlus } from "@fortawesome/free-solid-svg-icons";
 import BookList from "./containers/BookList/BookList";
 import ActionBar from "./containers/ActionBar/ActionBar";
 import HeaderLogo from "./components/HeaderLogo/HeaderLogo";
+import BookFocus from "./components/BookFocus/BookFocus";
 
 library.add(faSearch, faPlus);
 
@@ -12,14 +13,14 @@ const App = () => {
   const [booksArr, setBooksArr] = useState([]);
   const [textSearch, setTextSearch] = useState("");
 
-  // Retrieve API data function
+  // GET API data function
   const getBooks = () => {
     fetch("http://localhost:8080/books")
       .then((response) => response.json())
       .then((data) => setBooksArr(data));
   };
 
-  // Add API data function
+  // POST API data function
   // const addBook = () => {
   //   fetch("http://localhost:8080/book/")
   // };
@@ -28,10 +29,6 @@ const App = () => {
   useEffect(() => {
     getBooks();
   }, []);
-
-  // useEffect(() => {
-  // only filter when searchTerm changes
-  // }, [searchTerm]);
 
   console.log(booksArr);
 
@@ -58,6 +55,7 @@ const App = () => {
     <div className="App">
       <HeaderLogo text="Bibliotaph." />
       <ActionBar handleSearch={handleSearch} handleAdd={handleAdd} />
+      <BookFocus />
       <BookList booksArr={booksArrFilter} />
     </div>
   );
