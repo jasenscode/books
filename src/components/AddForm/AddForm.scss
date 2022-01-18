@@ -8,7 +8,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
   border-radius: 15px;
   &__label {
     font-weight: 700;
@@ -22,9 +21,13 @@
     border-radius: 5px;
     border: none;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+    width: 100%;
     &:focus {
       outline: 1px solid $tertiary;
     }
+  }
+  &__select {
+    width: auto;
   }
   &__btn {
     border: none;
