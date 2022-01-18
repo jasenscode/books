@@ -27,7 +27,7 @@ const ActionBar = (props) => {
     <div className="action-bar">
       <NavBar clickSearch={handleClickSearch} clickAdd={handleClickAdd} />
       {searchBox && <SearchBox placeholder="Type book name here ... " handleSearch={handleSearch} />}
-      {addForm && <AddForm handleAdd={handleAdd} />}
+      {addForm && <AddForm clickSubmit={handleAdd} />}
     </div>
   );
 };

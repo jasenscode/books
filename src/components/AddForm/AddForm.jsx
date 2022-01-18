@@ -1,18 +1,18 @@
 import "./AddForm.scss";
 
 const AddForm = (props) => {
-  // const { url, method } = props;
+  const { clickSubmit } = props;
 
   return (
-    <form action="" className="add-form">
+    <form action="" className="add-form" onSubmit={clickSubmit}>
       <label className="add-form__label">Title</label>
-      <input type="text" className="add-form__input" />
+      <input type="text" className="add-form__input" name="title" />
       <label className="add-form__label">Author</label>
-      <input type="text" className="add-form__input" />
+      <input type="text" className="add-form__input" name="author" />
       <label className="add-form__label">Description</label>
-      <textarea rows="5" cols="25" type="text" className="add-form__input" />
+      <textarea rows="5" cols="25" type="text" className="add-form__input" name="description" />
       <label className="add-form__label">Image URL</label>
-      <input type="text" className="add-form__input" />
+      <input type="text" className="add-form__input" name="imageurl" />
       <label className="add-form__label">Rating</label>
       <select className="add-form__input add-form__select" name="rating">
         <option value="1">1</option>

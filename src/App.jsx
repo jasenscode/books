@@ -42,9 +42,12 @@ const App = () => {
   };
 
   // Function to add book via POST
-  // const handleAdd = (event)=>{
-  //   event.preventDefault();
-  // };
+  const handleAdd = (event) => {
+    event.preventDefault();
+
+    // can use name properties on inputs in addform to get value
+    console.log(event.target.imageurl.value);
+  };
 
   // Use search value from search box input to filter over data from API
   const booksArrFilter = booksArr.filter((book) => {
@@ -54,7 +57,7 @@ const App = () => {
   return (
     <div className="App">
       <HeaderLogo text="Bibliotaph." />
-      <ActionBar handleSearch={handleSearch} />
+      <ActionBar handleSearch={handleSearch} handleAdd={handleAdd} />
       <BookList booksArr={booksArrFilter} />
     </div>
   );
