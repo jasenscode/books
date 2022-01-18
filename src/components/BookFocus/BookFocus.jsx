@@ -1,10 +1,12 @@
 import "./BookFocus.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const BookFocus = (props) => {
-  const { imgUrl, title, author, description, rating } = props;
+  const { imgUrl, title, author, description, rating, clickFocus } = props;
 
   return (
     <div className="book-focus">
+      <FontAwesomeIcon className="book-focus__close" icon="times" onClick={clickFocus} />
       <img className="book-focus__img" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1353048590l/6334.jpg" alt="" />
       <div className="book-focus__info">
         <h2 className="book-focus__title">Never Let Me Go</h2>

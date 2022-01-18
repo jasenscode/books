@@ -10,6 +10,14 @@
   background-color: $tertiary;
   margin-bottom: 4.5rem;
   padding: 1rem;
+  &__close {
+    align-self: flex-end;
+    font-size: 2rem;
+    color: $color-secondary;
+    cursor: pointer;
+    // color: $font-light;
+    // color: $color-primary;
+  }
   &__img {
     height: 300px;
     margin-bottom: -0.7rem;

@@ -7,18 +7,23 @@
   font-family: $primary-font;
   padding: 1rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 0.4rem;
-  width: 60%;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
   &__img {
-    width: 120px;
+    height: 110px;
     border: 1px solid $color-tertiary;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
   }
   &__name {
     font-weight: 700;
-    font-size: 1.3rem;
-    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
   }
   &__author {
     font-size: 0.9rem;
