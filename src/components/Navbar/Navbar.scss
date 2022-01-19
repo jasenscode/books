@@ -8,3 +8,10 @@
   align-items: center;
   justify-content: space-around;
 }
+
+@media all and (min-width: 1024px) {
+  .navbar {
+    justify-content: center;
+    gap: 6rem;
+  }
+}

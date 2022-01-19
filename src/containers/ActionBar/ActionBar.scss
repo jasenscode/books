@@ -14,4 +14,16 @@
   bottom: 0;
   box-shadow: rgba(0, 0, 0, 0.56) 3px 20px 50px 4px;
   z-index: 100;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+@media all and (min-width: 1024px) {
+  .action-bar {
+    position: static;
+    box-shadow: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: rgba(17, 17, 26, 0.1) 10px 5px 7px;
+  }
 }

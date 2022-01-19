@@ -10,7 +10,7 @@ const BookCard = (props) => {
 
   return (
     <div className="book-card" onClick={clickBook}>
-      <img className="book-card__img" src={imgUrl} alt="Book cover artwork" />
+      {imgUrl && <img className="book-card__img" src={imgUrl} alt="Book cover artwork" />}
       <div className="book-card-info">
         <p className="book-card__name">{name}</p>
         <p className="book-card__author">{author}</p>

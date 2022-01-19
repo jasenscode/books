@@ -11,3 +11,9 @@
   margin-bottom: 0;
   padding-bottom: 6rem;
 }
+
+@media all and (min-width: 1024px) {
+  .book-list {
+    padding-bottom: 1rem;
+  }
+}
