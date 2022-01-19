@@ -2,18 +2,13 @@
 @use "../../assets/sass/typography" as *;
 
 .book-card {
-  background-color: $color-secondary;
-  border-radius: 5px;
   font-family: $primary-font;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.4rem;
-  padding-right: 0.5rem;
-  width: 100%;
-  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  width: 139.859px;
   &__img {
-    height: 250px;
-    border: 1px solid $color-tertiary;
+    height: 220px;
   }
   &__info {
     display: flex;
@@ -22,18 +17,13 @@
   }
   &__name {
     font-weight: 700;
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    text-align: center;
   }
   &__author {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 600;
     font-family: $secondary-font;
-  }
-}
-
-@media all and (min-width: 1024px) {
-  .book-card {
-    width: 25%;
+    text-align: center;
   }
 }

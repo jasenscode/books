@@ -15,38 +15,29 @@ const App = () => {
   const [bookFocus, showBookFocus] = useState(false);
   const [individualBook, setIndividualBook] = useState({});
 
-  // FETCHES
-  // GET
+  // GET API data
   const getBooks = () => {
     fetch("http://localhost:8080/books")
       .then((response) => response.json())
       .then((data) => setBooksArr(data));
   };
 
-  // POST
-  // const addBook = () => {
-  //   fetch("http://localhost:8080/book/")
-  // };
-
-  // GET data from API
   useEffect(() => {
     getBooks();
   }, []);
 
-  // POST data to API
-  const handleAddBook = (event) => {
-    event.preventDefault();
-    // can use name properties on inputs in addform to get value
-    console.log(event.target.imageurl.value);
-  };
-
-  // Get search input value
+  // Book search function
   const handleSearchBook = (event) => {
     const searchTerm = event.target.value.toLowerCase();
     setTextSearch(searchTerm);
   };
 
-  // Function to show book focus
+  const booksArrFilter = booksArr.filter((book) => {
+    return textSearch ? book.name.toLowerCase().includes(textSearch) : booksArr;
+  });
+
+  // Show/hide detailed book information on click
+  // SHOW
   const handleClickCard = (event) => {
     showBookFocus(true);
 
@@ -57,22 +48,17 @@ const App = () => {
     });
   };
 
-  console.log(individualBook);
-
-  // Function to hide book focus
+  // HIDE
   const handleClickFocus = () => {
     showBookFocus(false);
   };
 
   // Use search value from search box input to filter over data from API
-  const booksArrFilter = booksArr.filter((book) => {
-    return textSearch ? book.name.toLowerCase().includes(textSearch) : booksArr;
-  });
 
   return (
     <div className="App">
       <HeaderLogo text="Bibliotaph." />
-      <ActionBar handleSearch={handleSearchBook} handleAdd={handleAddBook} />
+      <ActionBar handleSearch={handleSearchBook} />
       {bookFocus && individualBook ? <BookFocus book={individualBook} clickFocus={handleClickFocus} /> : <BookList booksArr={booksArrFilter} handleClick={handleClickCard} />}
     </div>
   );
