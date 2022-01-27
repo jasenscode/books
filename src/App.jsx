@@ -19,25 +19,17 @@ const App = () => {
   // GET API data
 
   // Retrieve all books
-  const getBooks = () => {
+  useEffect(() => {
     fetch("http://localhost:8080/books")
       .then((response) => response.json())
       .then((data) => setBooksArr(data));
-  };
-
-  useEffect(() => {
-    getBooks();
   }, []);
 
   // Retrieve book by ID
-  const getBookById = () => {
+  useEffect(() => {
     fetch(`http://localhost:8080/book/${bookId}`)
       .then((response) => response.json())
       .then((data) => setSingleBook(data));
-  };
-
-  useEffect(() => {
-    getBookById();
   }, [bookId]);
 
   // Book search function
