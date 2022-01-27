@@ -9,10 +9,10 @@ The timeframe allowed to complete this project was one week.
 [Back end repo here!](https://github.com/jasenscode/books-java-spring)
 
 <div>
-<img src="https://github.com/jasenscode/books/blob/main/src/assets/images/books.JPG?raw=true" height="400">
-<img src="https://github.com/jasenscode/books/blob/main/src/assets/images/books-find.JPG?raw=true" height="400">
-<img src="https://github.com/jasenscode/books/blob/main/src/assets/images/books-add.JPG?raw=true" height="400">
-<img src="https://github.com/jasenscode/books/blob/main/src/assets/images/books-zoom.JPG?raw=true" height="400">
+<img src="https://github.com/jasenscode/books/blob/main/src/assets/images/books.JPG?raw=true" height="300">
+<img src="https://github.com/jasenscode/books/blob/main/src/assets/images/books-find.JPG?raw=true" height="300">
+<img src="https://github.com/jasenscode/books/blob/main/src/assets/images/books-add.JPG?raw=true" height="300">
+<img src="https://github.com/jasenscode/books/blob/main/src/assets/images/books-zoom.JPG?raw=true" height="300">
 </div>
 
 ### Technologies
@@ -28,4 +28,4 @@ _____
 
 This is a full stack project utlising all of the above technologies in order to solidify all of the concepts learnt on the nology bootcamp so far.
 
-The application is able to CRUD a database with data on different books.
+The application is made using a React JS front end user interface, which will display 
