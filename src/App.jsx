@@ -1,13 +1,13 @@
 import "./App.scss";
 import { useState, useEffect } from "react";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faSearch, faPlus, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faPlus, faTimes, faTrash } from "@fortawesome/free-solid-svg-icons";
 import BookList from "./containers/BookList/BookList";
 import ActionBar from "./containers/ActionBar/ActionBar";
 import HeaderLogo from "./components/HeaderLogo/HeaderLogo";
 import BookFocus from "./components/BookFocus/BookFocus";
 
-library.add(faSearch, faPlus, faTimes);
+library.add(faSearch, faPlus, faTimes, faTrash);
 
 const App = () => {
   const [booksArr, setBooksArr] = useState([]);

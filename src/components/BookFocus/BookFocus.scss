@@ -10,8 +10,12 @@
   background-color: $tertiary;
   padding: 1rem;
   padding-bottom: 5rem;
-  &__close {
-    align-self: flex-end;
+  &__icon-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__icon {
     font-size: 2rem;
     color: $color-secondary;
     cursor: pointer;
@@ -49,4 +53,8 @@
     padding: 0.7rem;
     color: $font-light;
   }
+}
+
+.icon-trash {
+  font-size: 1.55rem;
 }
