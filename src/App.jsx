@@ -12,10 +12,13 @@ library.add(faSearch, faPlus, faTimes);
 const App = () => {
   const [booksArr, setBooksArr] = useState([]);
   const [textSearch, setTextSearch] = useState("");
+  const [singleBook, setSingleBook] = useState({});
   const [bookFocus, showBookFocus] = useState(false);
-  const [individualBook, setIndividualBook] = useState({});
+  const [bookId, setBookId] = useState(0);
 
   // GET API data
+
+  // Retrieve all books
   const getBooks = () => {
     fetch("http://localhost:8080/books")
       .then((response) => response.json())
@@ -25,6 +28,17 @@ const App = () => {
   useEffect(() => {
     getBooks();
   }, []);
+
+  // Retrieve book by ID
+  const getBookById = () => {
+    fetch(`http://localhost:8080/book/${bookId}`)
+      .then((response) => response.json())
+      .then((data) => setSingleBook(data));
+  };
+
+  useEffect(() => {
+    getBookById();
+  }, [bookId]);
 
   // Book search function
   const handleSearchBook = (event) => {
@@ -37,13 +51,14 @@ const App = () => {
   });
 
   // Show/hide detailed book information on click
+
   // SHOW
   const handleClickCard = (event) => {
     showBookFocus(true);
 
     booksArr.forEach((book) => {
       if (book.name.toLowerCase() === event.target.innerText.toLowerCase() || book.author.toLowerCase() === event.target.innerText.toLowerCase() || book.imageUrl === event.target.currentSrc) {
-        setIndividualBook(book);
+        setBookId(book.id);
       }
     });
   };
@@ -59,7 +74,7 @@ const App = () => {
     <div className="App">
       <HeaderLogo text="Bibliotaph." />
       <ActionBar handleSearch={handleSearchBook} />
-      {bookFocus && individualBook ? <BookFocus book={individualBook} clickFocus={handleClickFocus} /> : <BookList booksArr={booksArrFilter} handleClick={handleClickCard} />}
+      {bookFocus && bookId ? <BookFocus book={singleBook} clickFocus={handleClickFocus} /> : <BookList booksArr={booksArrFilter} handleClick={handleClickCard} />}
     </div>
   );
 };
