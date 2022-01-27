@@ -38,4 +38,4 @@ Once this was done, I moved on to the React application. This required:
 - A page to show each individual book with further information, again using a GET request utilising the ID
 - A page for users to add new books to the database
 
-firstly by creating a component diagram to map out exactly what would be required in order to create the app. 
+At this point, I created a component diagram to map out exactly what would be required in order to create the app, after which worked on the design of the app in Figma.  
